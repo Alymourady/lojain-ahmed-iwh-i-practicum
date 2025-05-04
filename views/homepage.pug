@@ -1,19 +1,26 @@
 doctype html
 html
   head
-    title Homepage
+    title Custom Object Table
+    link(rel='stylesheet', href='/css/style.css')
   body
-    h1 Custom Object Records
-    a(href="/update-cobj") Add New Record
-    table(border="1")
-      thead
-        tr
-          th Name
-          th Field 1
-          th Field 2
-      tbody
-        each item in records
+    h1 Custom Object Table
+
+    a(href="/update-cobj") Add/Update this table
+
+    if records && records.length
+      table(border="1")
+        thead(style="background-color: pink")
           tr
-            td= item.properties.name
-            td= item.properties.kaza_1
-            td= item.properties.kaza_2
+            th Name
+            th Amount
+            th Length
+        tbody
+          each record in records
+            tr
+              td #{record.properties.name}
+              td #{record.properties.amount}
+              td #{record.properties.length}
+    else
+      p No records found.
+
