@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Add Record
+  body
+    h1 Add a New Custom Object Record
+    form(action="/update-cobj" method="POST")
+      div
+        label(for="name") Name:
+        input(type="text" name="name")
+      div
+        label(for="kaza_2") amount:
+        input(type="text" name="kaza_2")
+      div
+        label(for="kaza_1") length:
+        input(type="text" name="kaza_1")
+      div
+        button(type="submit") Submit
+    a(href="/") Return to Homepage
