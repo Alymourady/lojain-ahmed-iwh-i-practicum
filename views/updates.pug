@@ -7,13 +7,13 @@ html
     form(action="/update-cobj" method="POST")
       div
         label(for="name") Name:
-        input(type="text" name="name")
+        input(type="text", name="name", required=true)
       div
-        label(for="kaza_2") amount:
-        input(type="text" name="kaza_2")
+        label(for="amount") Amount:
+        input(type="text", name="amount")
       div
-        label(for="kaza_1") length:
-        input(type="text" name="kaza_1")
+        label(for="length") Length:
+        input(type="text", name="length")
       div
         button(type="submit") Submit
     a(href="/") Return to Homepage
